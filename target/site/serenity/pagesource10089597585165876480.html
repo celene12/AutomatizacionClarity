@@ -1,0 +1,101 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="en"&gt;<br/>
+ &lt;head&gt;<br/>
+  &lt;meta charset="utf-8"&gt;<br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;<br/>
+  &lt;link rel="shortcut icon" type="image/png" href="https://d3g1m0ongnpwql.cloudfront.net/claritywave/static/5be9101db0a9ebfd0688f5ed4/images/favicon.png"&gt;<br/>
+  &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;<br/>
+  &lt;link rel="stylesheet" type="text/css" href="https://d3g1m0ongnpwql.cloudfront.net/claritywave/static/5be9101db0a9ebfd0688f5ed4/css/v2/fonts/fontawesome/fontawesome.css?unique_mark=1741711130"&gt;<br/>
+  &lt;link rel="stylesheet" type="text/css" href="https://d3g1m0ongnpwql.cloudfront.net/claritywave/static/5be9101db0a9ebfd0688f5ed4/css/v2/fonts/fontawesome/solid.css?unique_mark=1741711130"&gt;<br/>
+  &lt;link rel="stylesheet" type="text/css" href="https://d3g1m0ongnpwql.cloudfront.net/claritywave/static/5be9101db0a9ebfd0688f5ed4/css/v2/fonts/fontawesome/light.css?unique_mark=1741711130"&gt;<br/>
+  &lt;link rel="stylesheet" type="text/css" href="https://d3g1m0ongnpwql.cloudfront.net/claritywave/static/5be9101db0a9ebfd0688f5ed4/css/v2/fonts/fontawesome/brands.css?unique_mark=1741711130"&gt;<br/>
+  &lt;link rel="stylesheet" type="text/css" href="https://d3g1m0ongnpwql.cloudfront.net/claritywave/static/5be9101db0a9ebfd0688f5ed4/css/v2/style.css?unique_mark=1741711130"&gt;<br/>
+  &lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;<br/>
+  &lt;title&gt;Login - ClarityWave&lt;/title&gt;<br/>
+  &lt;style&gt;<br/>
+        .email {<br/>
+            text-transform: lowercase;<br/>
+        }<br/>
+        .email:placeholder-shown {<br/>
+            text-transform: none;<br/>
+        }<br/>
+<br/>
+        .accounts {<br/>
+            grid-template-columns: .75fr 1fr;<br/>
+        }<br/>
+<br/>
+        @media screen and (max-width: 767.98px) {<br/>
+            .accounts {<br/>
+                grid-template-columns: 1fr;<br/>
+            }<br/>
+        }<br/>
+<br/>
+    &lt;/style&gt;<br/>
+  &lt;script&gt;<br/>
+        const searchStr = 'Buscar';<br/>
+        const printText = 'Imprimir'<br/>
+        const downloadText = 'Descargar'<br/>
+    &lt;/script&gt;<br/>
+ &lt;/head&gt;<br/>
+ &lt;body&gt;<br/>
+  &lt;div class="accounts"&gt;<br/>
+   &lt;div class="accounts-content w-100 h-100"&gt;<br/>
+    &lt;div class="accounts-content-wrapper"&gt;<br/>
+     &lt;div class="d-none ie-alert"&gt;<br/>
+      Este sistema está diseñado para navegadores más modernos, por lo cual se recomienda el uso de alguno de ellos.<br/>
+     &lt;/div&gt;<br/>
+     &lt;div id="alerts-container"&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div class="company mt-2 md:mt-48"&gt;<br/>
+      &lt;div class="logo-container"&gt;&lt;a href="/"&gt; &lt;img class="logo-container__image" src="https://d3g1m0ongnpwql.cloudfront.net/media/quipux-3824568016/companies/7e8244af0d901b75547c3c3b5444e7d45e840c4dad6dfd5bb6c6c9ee25293964.png"&gt; &lt;/a&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div class="accounts-content-form"&gt;<br/>
+      &lt;h1 class="accounts-content-wrapper__title mb-2"&gt;Hola, te damos la bienvenida&lt;/h1&gt;<br/>
+      &lt;p class="accounts-content-wrapper__subtitle"&gt;Inicia sesión para comenzar&lt;/p&gt;<br/>
+      &lt;form id="login_form" method="POST"&gt;&lt;input type="hidden" name="csrfmiddlewaretoken" value="2s21IxCQLhFDbtRPJvyoYwBJ5FM3eeNLP8wDYcp0RlBXrblr9u9uaHW7V7wEshLS"&gt;<br/>
+       &lt;div class="mb-3"&gt;&lt;label class="accounts-content-form__label w-100" for="email"&gt; Dirección de correo electrónico &lt;/label&gt; &lt;input class="email accounts-content-form__input form-control " type="text" name="username" placeholder="Ingresa un email válido"&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;ul class="errorlist"&gt;<br/>
+       &lt;/ul&gt;<br/>
+       &lt;div class="d-flex justify-content-between w-100"&gt;&lt;label class="accounts-content-form__label" for="password"&gt;Contraseña&lt;/label&gt; &lt;a href="/accounts/password/reset/" class="accounts-content-form__label--password-recover text-color-purple"&gt;¿Olvidaste tu contraseña?&lt;/a&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div class="password-container"&gt;&lt;input class="accounts-content-form__input form-control " type="password" name="password" placeholder="Ingresa tu contraseña"&gt; &lt;span class="password-toggle fal fa-eye"&gt;&lt;/span&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;ul class="errorlist"&gt;<br/>
+       &lt;/ul&gt;<br/>
+       &lt;ul class="errorlist error-controls"&gt;<br/>
+       &lt;/ul&gt;<br/>
+       &lt;div&gt;&lt;button id="submit_button" type="submit" class="accounts-content-form__submit btn btn-purple w-100 mb-2 text-small"&gt; Ingresar &lt;i id="btn-spinner" class="fas fa-spinner fa-spin d-none"&gt;&lt;/i&gt; &lt;/button&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/form&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;div class="accounts-content-footer"&gt;<br/>
+     &lt;p class="accounts-content-footer__text"&gt;Powered by &lt;span class="accounts-content-footer__logo"&gt;ClarityWave&lt;/span&gt;®&lt;/p&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div class="accounts-image w-100 h-100"&gt;&lt;img class="accounts-image__image" src="https://d3g1m0ongnpwql.cloudfront.net/claritywave/static/5be9101db0a9ebfd0688f5ed4/images/login_team_grey.jpg"&gt;<br/>
+    &lt;div class="accounts-image__overlay" style="background-color: #ffffff00;"&gt;&lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+  &lt;script&gt;<br/>
+        document.addEventListener('DOMContentLoaded', function() {<br/>
+            const form = document.getElementById('login_form');<br/>
+            const submitButton = document.getElementById('submit_button');<br/>
+            const spinner = document.getElementById('btn-spinner');<br/>
+    <br/>
+            form.addEventListener('submit', function(event) {<br/>
+                // Deshabilitar el botón de envío para evitar envíos múltiples<br/>
+                submitButton.disabled = true;<br/>
+                spinner.classList.remove('d-none');<br/>
+            });<br/>
+        });<br/>
+    &lt;/script&gt;<br/>
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="https://d3g1m0ongnpwql.cloudfront.net/claritywave/static/5be9101db0a9ebfd0688f5ed4/js/v2/app.js?unique_mark=1741711130"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="https://d3g1m0ongnpwql.cloudfront.net/claritywave/static/5be9101db0a9ebfd0688f5ed4/js/v2/onload.js?unique_mark=1741711130"&gt;&lt;/script&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
