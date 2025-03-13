@@ -7,5 +7,5 @@ Característica: Automatizar validacion de puntos en Clarity
     Cuando voy a estado de canjes para validar mis puntos
     Entonces veo el mensaje de 'Monedas Acumuladas'
     Ejemplos:
-      | email                   | contrasena   |
-      | celene.parra@quipux.com | CeCeCeCe1234 |
+      | email                   | contrasena |
+      | celene.parra@quipux.com | *******    |
